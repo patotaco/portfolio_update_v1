@@ -37,7 +37,7 @@ a:hover {
 }
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   font-weight: 700;
   list-style-type: none;
   margin: 0 auto;
@@ -45,9 +45,9 @@ a:hover {
 }
 
 .nav .name {
-    display: block;
+    display: inline-block;
     margin-right: auto;
-    color: #white;
+    color: rgba(255,255,255,.8);
 }
 .nav li {
   padding: 5px 10px 10px 10px;
@@ -61,7 +61,7 @@ a:hover {
 
 header {
   text-align: center;
-  background-image: url("images/bellevue.jpg");
+  background-image: url("images/banner.jpg");
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -78,21 +78,22 @@ header .profile-image {
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(360deg);
 }
 .tag {
-  background-color: forestgreen;
-  color: black;
+  
+  color: white;
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
 } 
 .location {
-  background-color: forestgreen;
-  color: yellow;
+ 
+  color: white;
 }
 .card {
+
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
@@ -102,12 +103,57 @@ header .profile-image:hover {
   border-radius: 6px;
   transition: all .5s;
 }
+.card0 {
+  background-image: url("images/rocky1.jpeg") ;
+  background-size: cover;
+  font-size:  1rem;
+  color: rgba(0,0,0,.2);
+  overflow: hidden;
+  text-decoration: underline overline
+}
+.card0 p{
+  line-height: 2rem;
+}
+.card0:hover {
+  color: #7ec954;
+  background-image: none;
+  transition: all 1.5s;
+  text-decoration: none;
+}
+.card1:hover {
+  background-image: url("images/portland.jpg") ;
+  color: #7ec954;
+ 
+  text-decoration: line-through;
+  transition: all .5s;
+}
+.white p{
+  color:white;
+}
 .card:hover {
   border-color: forestgreen;
 }
 
 .card1:hover {
-  border-color: yellow;
+  border-color: #0399ff;
+}
+.card2:hover {
+  background-color: #338FD7;
+  border-color: forestgreen;
+  color: white;
+}
+.card2 {
+  min-width: 80%;
+}
+.listen{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.img_go{
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 50%;
 }
 
 ul.skills {
@@ -118,7 +164,7 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: #7ec954;
   color: white;
   padding: 5px 10px;
   margin: 2px;
@@ -127,7 +173,9 @@ ul.skills {
 .skills li:nth-child(odd) {
   background: #0399ff;
 }
-
+.listen li:nth-child(odd) {
+  background: #338FD7;
+}
 footer {
   width: 100%;
   min-height: 30px;
@@ -175,11 +223,48 @@ a.social:hover {
   clear: both;
 }
 /* Styles for Explorer page */
-.go {
+.go h1{
+  padding-top: 60px;
+  padding-bottom: 20px;
+  background-color: #7ec954;
+  color: white;
+  margin: 0;
+}
+.map{
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.img_go{
+  height: 50vh;
+  width: 100vw;
+  padding-bottom: 20px;
+  
+  overflow: hidden;
 
-  padding-top: 50px;
+}
+span a:hover {
+  text-decoration: line-through;
+  color: rgba(0,0,0,.8);
 }
 
+.listen li {
+  border-radius: 6px;
+  display: inline-block;
+  background: #7ec954;
+  color: white;
+  padding: 25px 10px;
+  margin: 2px;
+  text-align: center;
+  font-size: 2rem;
+}
+.listen a{
+  color: white;
+}
+.listen a:hover {
+  color: darkgreen;
+  transition: all .5s;
+}
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
@@ -211,8 +296,8 @@ a.social:hover {
     line-height: 1.6em;
   }
 
-  footer {
-    font-size: 1.3em;
+  footer p{
+    font-size: 1em;
     max-width: 1200px;
     margin: 40px auto;
   }
