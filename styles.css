@@ -12,9 +12,7 @@ body {
   background: #f7f5f0;
 }
 /* Link Styles */
-.social a:hover {
-  transitions: 4s;
-}
+
 a {
   text-decoration: none;
   color: #999;
